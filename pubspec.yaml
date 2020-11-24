@@ -1,8 +1,8 @@
 name: flutter_ds_bfi
 description: Design System Package for BFI
 version: 0.0.1
-author:
-homepage:
+author: Bimo Satriantoro
+homepage: https://github.com/satriantorobimo/flutter_bfi_ds
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

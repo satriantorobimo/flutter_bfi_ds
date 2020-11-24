@@ -1,4 +1,4 @@
-import 'package:bfi_ds/flutter_ds_bfi.dart';
+import 'package:flutter_ds_bfi/flutter_ds_bfi.dart';
 import 'package:flutter/material.dart';
 
 class CardScreen extends StatelessWidget {
