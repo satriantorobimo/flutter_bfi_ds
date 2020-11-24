@@ -1,3 +1,3 @@
-## [0.0.1] - TODO: Add release date.
+## [0.0.1] - 24 November 2020.
 
-* TODO: Describe initial release.
+First Publish Design System to Pub Dev
