@@ -40,63 +40,92 @@ class DSCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ListTile(
-            leading: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  width: 40,
-                  height: 40,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.white),
-                  child: Padding(
-                    padding: const EdgeInsets.all(4.0),
-                    child: Image.asset(
-                      icon,
-                      width: 32,
+            leading: Padding(
+              padding: const EdgeInsets.only(top: 16.0, left: 16.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 40,
+                    height: 40,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.white),
+                    child: Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: Image.asset(
+                        icon,
+                        width: 32,
+                      ),
                     ),
-                  ),
-                )
-              ],
+                  )
+                ],
+              ),
             ),
-            title: Container(
-              child: Text('No.Kontrak $noKontrak',
-                  style: TextStyle(fontSize: 12, color: Colors.white)),
+            title: Padding(
+              padding: const EdgeInsets.only(top: 16.0),
+              child: Container(
+                child: Text('No.Kontrak $noKontrak',
+                    style: TextStyle(fontSize: 12, color: Colors.white)),
+              ),
             ),
             subtitle: Text(licensePlate ?? '-',
                 style: TextStyle(fontSize: 12, color: Colors.white)),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 16.0),
-            child: Container(
-              child: Text(
-                'Angsuran /bulan',
-                style: TextStyle(fontSize: 10, color: Colors.white),
-              ),
-            ),
+          SizedBox(
+            height: 16,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 16.0, bottom: 16.0),
-                child: Container(
-                  child: Text(
-                    angsuranPerBulan,
-                    style: TextStyle(
-                        fontSize: 14,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold),
+              Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 32.0),
+                    child: Container(
+                      child: Text(
+                        'Angsuran /bulan',
+                        style: TextStyle(fontSize: 10, color: Colors.white),
+                      ),
+                    ),
                   ),
-                ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 32.0, bottom: 16.0),
+                    child: Container(
+                      child: Text(
+                        angsuranPerBulan,
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          decoration: TextDecoration.underline,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
-              Padding(
-                padding: const EdgeInsets.only(right: 16.0, bottom: 16.0),
-                child: Text('Jatuh Tempo $jatuhTempo',
-                    style: TextStyle(fontSize: 12, color: Colors.white)),
-              )
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(right: 32.0),
+                    child: Container(
+                      child: Text(
+                        'Jatuh Tempo',
+                        style: TextStyle(fontSize: 10, color: Colors.white),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 32.0, bottom: 16.0),
+                    child: Text(jatuhTempo,
+                        style: TextStyle(fontSize: 12, color: Colors.white)),
+                  )
+                ],
+              ),
             ],
-          )
+          ),
         ],
       ),
     );
