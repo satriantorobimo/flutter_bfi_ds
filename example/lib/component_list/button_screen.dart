@@ -83,7 +83,34 @@ class ButtonScreen extends StatelessWidget {
                   buttonState: DSButtonState.Disable,
                   color: DSColor.primaryBlue,
                   onTap: () {},
-                )
+                ),
+                DSText(
+                  data: 'Ghost Button',
+                  textStyle: TextStyle(
+                    fontFamily: DSFont.Poppins,
+                    color: Colors.black,
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                DSGhostButton(
+                  text: "Active Button",
+                  fontSize: 16,
+                  buttonState: DSButtonState.Ghost,
+                  fontWeight: FontWeight.normal,
+                  onTap: () {},
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                DSGhostButton(
+                  text: "Disabled Button",
+                  buttonState: DSButtonState.GhostDisable,
+                  fontSize: 16,
+                  fontWeight: FontWeight.normal,
+                  onTap: () {},
+                ),
               ],
             ),
           )),

@@ -1,3 +1,3 @@
 part of flutter_ds_bfi;
 
-enum DSButtonState { Active, Disable, Tapable }
+enum DSButtonState { Active, Disable, Tapable, Ghost, GhostDisable }
