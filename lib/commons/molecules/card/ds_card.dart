@@ -7,13 +7,15 @@ class DSCard extends StatelessWidget {
   final String jatuhTempo;
   final String bgCard;
   final String icon;
+  final String titleAngsuran;
   const DSCard(
       {this.noKontrak,
       this.licensePlate,
       this.angsuranPerBulan,
       this.jatuhTempo,
       this.bgCard,
-      this.icon});
+      this.icon,
+      this.titleAngsuran});
 
   @override
   Widget build(BuildContext context) {
@@ -45,19 +47,23 @@ class DSCard extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    width: 40,
-                    height: 40,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.white),
-                    child: Padding(
-                      padding: const EdgeInsets.all(4.0),
-                      child: Image.asset(
-                        icon,
-                        width: 32,
+                  Column(
+                    children: [
+                      Container(
+                        width: 40,
+                        height: 40,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.white),
+                        child: Padding(
+                          padding: const EdgeInsets.all(4.0),
+                          child: Image.asset(
+                            icon,
+                            width: 32,
+                          ),
+                        ),
                       ),
-                    ),
+                    ],
                   )
                 ],
               ),
@@ -84,7 +90,7 @@ class DSCard extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 32.0),
                     child: Container(
                       child: Text(
-                        'Angsuran /bulan',
+                        titleAngsuran,
                         style: TextStyle(fontSize: 10, color: Colors.white),
                       ),
                     ),

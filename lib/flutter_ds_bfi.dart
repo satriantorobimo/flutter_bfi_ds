@@ -13,3 +13,4 @@ part 'commons/molecules/buttons/ds_nuded_button.dart';
 part 'commons/molecules/buttons/ds_ghost_button.dart';
 part 'commons/molecules/card/ds_card.dart';
 part 'commons/molecules/card/ds_card_contactus.dart';
+part 'commons/molecules/loading/ds_loading_card.dart';

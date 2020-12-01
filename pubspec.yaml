@@ -1,6 +1,6 @@
 name: flutter_ds_bfi
 description: Design System Package for BFI
-version: 0.0.1+2
+version: 0.0.1+3
 homepage: https://github.com/satriantorobimo/flutter_bfi_ds
 
 environment:
@@ -10,6 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  shimmer: ^1.1.2
 
 dev_dependencies:
   flutter_test:
