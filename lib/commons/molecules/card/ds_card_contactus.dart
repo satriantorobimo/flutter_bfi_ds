@@ -29,7 +29,7 @@ class DSCardContactUs extends StatelessWidget {
       ),
       child: Center(
         child: ListTile(
-          isThreeLine: true,
+          isThreeLine: subtitle2 == null ? false : true,
           leading: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -53,11 +53,12 @@ class DSCardContactUs extends StatelessWidget {
                 : Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      SizedBox(height: 2),
                       DSText(
                         data: subtitle,
                         textStyle: TextStyle(color: Colors.grey, fontSize: 12),
                       ),
-                      SizedBox(height: 4),
+                      SizedBox(height: 2),
                       DSText(
                         data: subtitle2,
                         textStyle: TextStyle(color: Colors.grey, fontSize: 12),
