@@ -39,12 +39,15 @@ class DSCardContactUs extends StatelessWidget {
               )
             ],
           ),
-          title: DSText(
-            data: title,
-            textStyle: TextStyle(color: DSColor.primaryBlue, fontSize: 14),
+          title: Padding(
+            padding: EdgeInsets.only(top: subtitle2 == null ? 8.0 : 0.0),
+            child: DSText(
+              data: title,
+              textStyle: TextStyle(color: DSColor.primaryBlue, fontSize: 14),
+            ),
           ),
           subtitle: Padding(
-            padding: const EdgeInsets.only(top: 8.0),
+            padding: EdgeInsets.only(top: subtitle2 == null ? 8.0 : 0.0),
             child: subtitle2 == null
                 ? DSText(
                     data: subtitle,
@@ -53,12 +56,11 @@ class DSCardContactUs extends StatelessWidget {
                 : Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(height: 2),
+                      SizedBox(height: 4),
                       DSText(
                         data: subtitle,
                         textStyle: TextStyle(color: Colors.grey, fontSize: 12),
                       ),
-                      SizedBox(height: 2),
                       DSText(
                         data: subtitle2,
                         textStyle: TextStyle(color: Colors.grey, fontSize: 12),
