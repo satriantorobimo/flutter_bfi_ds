@@ -13,3 +13,7 @@ Add Custom Card for Contact Us
 ## [0.0.1+3] - 01 December 2020.
 
 Add new param titleAngsuran on DSCard
+
+## [0.0.1+4] - 01 December 2020.
+
+Add new param subtitle2 on DSCardContactUs

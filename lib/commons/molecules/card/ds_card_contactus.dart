@@ -4,8 +4,10 @@ class DSCardContactUs extends StatelessWidget {
   final String image;
   final String title;
   final String subtitle;
+  final String subtitle2;
 
-  const DSCardContactUs({this.title, this.subtitle, this.image});
+  const DSCardContactUs(
+      {this.title, this.subtitle, this.image, this.subtitle2});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,6 +29,7 @@ class DSCardContactUs extends StatelessWidget {
       ),
       child: Center(
         child: ListTile(
+          isThreeLine: true,
           leading: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -42,10 +45,25 @@ class DSCardContactUs extends StatelessWidget {
           ),
           subtitle: Padding(
             padding: const EdgeInsets.only(top: 8.0),
-            child: DSText(
-              data: subtitle,
-              textStyle: TextStyle(color: Colors.grey, fontSize: 12),
-            ),
+            child: subtitle2 == null
+                ? DSText(
+                    data: subtitle,
+                    textStyle: TextStyle(color: Colors.grey, fontSize: 12),
+                  )
+                : Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      DSText(
+                        data: subtitle,
+                        textStyle: TextStyle(color: Colors.grey, fontSize: 12),
+                      ),
+                      SizedBox(height: 4),
+                      DSText(
+                        data: subtitle2,
+                        textStyle: TextStyle(color: Colors.grey, fontSize: 12),
+                      )
+                    ],
+                  ),
           ),
           trailing: Column(
             mainAxisAlignment: MainAxisAlignment.center,
