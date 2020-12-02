@@ -40,14 +40,14 @@ class DSCardContactUs extends StatelessWidget {
             ],
           ),
           title: Padding(
-            padding: EdgeInsets.only(top: subtitle2 == null ? 8.0 : 0.0),
+            padding: EdgeInsets.only(top: subtitle2 != null ? 8.0 : 0.0),
             child: DSText(
               data: title,
               textStyle: TextStyle(color: DSColor.primaryBlue, fontSize: 14),
             ),
           ),
           subtitle: Padding(
-            padding: EdgeInsets.only(top: subtitle2 == null ? 8.0 : 0.0),
+            padding: EdgeInsets.only(top: subtitle2 != null ? 8.0 : 0.0),
             child: subtitle2 == null
                 ? DSText(
                     data: subtitle,

@@ -25,3 +25,7 @@ Add logic in three lines on DSCardContactUs
 ## [0.0.1+6] - 01 December 2020.
 
 Bug Fix on DSCardContactUs & DSCard
+
+## [0.0.1+7] - 02 December 2020.
+
+Bug Fix on DSCardContactUs
