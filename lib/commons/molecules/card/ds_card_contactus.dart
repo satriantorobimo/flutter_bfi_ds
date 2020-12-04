@@ -17,11 +17,11 @@ class DSCardContactUs extends StatelessWidget {
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.3),
+            color: Color(0xFFABABAB).withOpacity(0.2),
             blurRadius: 1.5, // has the effect of softening the shadow
             spreadRadius: 1.5, // has the effect of extending the shadow
             offset: Offset(
-              2.0, // horizontal, move right 10
+              0.0, // horizontal, move right 10
               1.0, // vertical, move down 10
             ),
           )

@@ -71,7 +71,7 @@ class DSCard extends StatelessWidget {
             title: Padding(
               padding: const EdgeInsets.only(top: 16.0),
               child: Container(
-                child: Text('No.Kontrak $noKontrak',
+                child: Text('No. Kontrak $noKontrak',
                     style: TextStyle(fontSize: 12, color: Colors.white)),
               ),
             ),
