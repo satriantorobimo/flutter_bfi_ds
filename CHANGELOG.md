@@ -33,3 +33,7 @@ Bug Fix on DSCardContactUs
 ## [0.0.1+8] - 04 December 2020.
 
 Bug Fix on DSCardContactUs
+
+## [0.0.1+9] - 08 December 2020.
+
+Bug Fix on DSCardContactUs shadow
