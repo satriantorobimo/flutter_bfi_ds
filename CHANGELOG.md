@@ -37,3 +37,11 @@ Bug Fix on DSCardContactUs
 ## [0.0.1+9] - 08 December 2020.
 
 Bug Fix on DSCardContactUs shadow
+
+## [0.0.1+10] - 22 December 2020.
+
+Bug Fix on DSCard. Add 2 param, onTap and Icon Arrow
+
+## [0.0.1+11] - 22 December 2020.
+
+Bug Fix on DSCardContactUs Padding

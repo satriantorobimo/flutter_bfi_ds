@@ -8,6 +8,8 @@ class DSCard extends StatelessWidget {
   final String bgCard;
   final String icon;
   final String titleAngsuran;
+  final String arrowUp;
+  final GestureTapCallback onTap;
   const DSCard(
       {this.noKontrak,
       this.licensePlate,
@@ -15,11 +17,14 @@ class DSCard extends StatelessWidget {
       this.jatuhTempo,
       this.bgCard,
       this.icon,
-      this.titleAngsuran});
+      this.titleAngsuran,
+      this.arrowUp,
+      this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 145,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
@@ -69,17 +74,20 @@ class DSCard extends StatelessWidget {
               ),
             ),
             title: Padding(
-              padding: const EdgeInsets.only(top: 16.0),
+              padding: const EdgeInsets.only(top: 16.0, bottom: 8),
               child: Container(
                 child: Text('No. Kontrak $noKontrak',
-                    style: TextStyle(fontSize: 12, color: Colors.white)),
+                    style: TextStyle(
+                        fontSize: 14,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold)),
               ),
             ),
             subtitle: Text(licensePlate ?? '-',
                 style: TextStyle(fontSize: 12, color: Colors.white)),
           ),
           SizedBox(
-            height: 16,
+            height: 24,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -92,21 +100,31 @@ class DSCard extends StatelessWidget {
                     child: Container(
                       child: Text(
                         titleAngsuran,
-                        style: TextStyle(fontSize: 10, color: Colors.white),
+                        style: TextStyle(fontSize: 12, color: Colors.white),
                       ),
                     ),
                   ),
+                  SizedBox(height: 8),
                   Padding(
                     padding: const EdgeInsets.only(left: 32.0, bottom: 16.0),
-                    child: Container(
-                      child: Text(
-                        angsuranPerBulan,
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          decoration: TextDecoration.underline,
-                        ),
+                    child: InkWell(
+                      onTap: onTap,
+                      child: Row(
+                        children: [
+                          Text(
+                            angsuranPerBulan,
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          SizedBox(width: 8),
+                          Image.asset(
+                            arrowUp,
+                            height: 8,
+                          )
+                        ],
                       ),
                     ),
                   ),
@@ -120,14 +138,18 @@ class DSCard extends StatelessWidget {
                     child: Container(
                       child: Text(
                         'Jatuh Tempo',
-                        style: TextStyle(fontSize: 10, color: Colors.white),
+                        style: TextStyle(fontSize: 12, color: Colors.white),
                       ),
                     ),
                   ),
+                  SizedBox(height: 8),
                   Padding(
                     padding: const EdgeInsets.only(right: 32.0, bottom: 16.0),
                     child: Text(jatuhTempo,
-                        style: TextStyle(fontSize: 12, color: Colors.white)),
+                        style: TextStyle(
+                            fontSize: 14,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold)),
                   )
                 ],
               ),

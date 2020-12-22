@@ -47,7 +47,9 @@ class DSCardContactUs extends StatelessWidget {
             ),
           ),
           subtitle: Padding(
-            padding: EdgeInsets.only(top: subtitle2 != null ? 8.0 : 0.0),
+            padding: EdgeInsets.only(
+              top: subtitle2 != null ? 2.0 : 0.0,
+            ),
             child: subtitle2 == null
                 ? DSText(
                     data: subtitle,
@@ -56,7 +58,6 @@ class DSCardContactUs extends StatelessWidget {
                 : Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(height: 4),
                       DSText(
                         data: subtitle,
                         textStyle: TextStyle(color: Colors.grey, fontSize: 12),

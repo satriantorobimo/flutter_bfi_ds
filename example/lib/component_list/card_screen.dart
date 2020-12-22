@@ -16,12 +16,16 @@ class CardScreen extends StatelessWidget {
           children: [
             DSCard(
               angsuranPerBulan: 'Rp. 500.000',
-              jatuhTempo: '12/12/2020',
+              jatuhTempo: '12 Desember 2020',
               licensePlate: 'B1MO',
               noKontrak: '054651064130',
               bgCard: 'assets/imgs/card_blue.png',
               icon: 'assets/imgs/mobil.png',
-              titleAngsuran: 'Angsuran /bulan',
+              titleAngsuran: 'Tagihan Bulan Ini',
+              arrowUp: 'assets/imgs/arrow_up_white.png',
+              onTap: () {
+                print('tap tap tap');
+              },
             ),
             SizedBox(height: 30),
             DSCardContactUs(
