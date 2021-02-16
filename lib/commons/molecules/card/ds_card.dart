@@ -3,8 +3,8 @@ part of flutter_ds_bfi;
 class DSCard extends StatelessWidget {
   final String noKontrak;
   final String licensePlate;
-  final String angsuranPerBulan;
-  final String jatuhTempo;
+  final Widget angsuranPerBulan;
+  final Widget jatuhTempo;
   final String bgCard;
   final String icon;
   final String titleAngsuran;
@@ -111,19 +111,8 @@ class DSCard extends StatelessWidget {
                       onTap: onTap,
                       child: Row(
                         children: [
-                          Text(
-                            angsuranPerBulan,
-                            style: TextStyle(
-                              fontSize: 14,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
+                          angsuranPerBulan,
                           SizedBox(width: 8),
-                          Image.asset(
-                            arrowUp,
-                            height: 8,
-                          )
                         ],
                       ),
                     ),
@@ -145,11 +134,7 @@ class DSCard extends StatelessWidget {
                   SizedBox(height: 8),
                   Padding(
                     padding: const EdgeInsets.only(right: 32.0, bottom: 16.0),
-                    child: Text(jatuhTempo,
-                        style: TextStyle(
-                            fontSize: 14,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold)),
+                    child: jatuhTempo,
                   )
                 ],
               ),

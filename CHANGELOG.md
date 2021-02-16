@@ -45,3 +45,19 @@ Bug Fix on DSCard. Add 2 param, onTap and Icon Arrow
 ## [0.0.1+11] - 22 December 2020.
 
 Bug Fix on DSCardContactUs Padding
+
+## [0.0.1+12] - 14 January 2021.
+
+Happy New Year 2021
+
+## [0.0.1+13] - 14 January 2021.
+
+Delete icon arrow DSCard
+
+## [0.0.1+14] - 21 January 2021.
+
+Change String angsuran perbulan & jatuh tempo into widget on DSCard
+
+## [0.0.1+15] - 16 February 2021.
+
+Add General DS Button, Add Card for Product Information

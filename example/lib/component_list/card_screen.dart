@@ -15,8 +15,19 @@ class CardScreen extends StatelessWidget {
         child: Column(
           children: [
             DSCard(
-              angsuranPerBulan: 'Rp. 500.000',
-              jatuhTempo: '12 Desember 2020',
+              angsuranPerBulan: Text(
+                'Rp. 500.000',
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              jatuhTempo: Text('12 Desember 2020',
+                  style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold)),
               licensePlate: 'B1MO',
               noKontrak: '054651064130',
               bgCard: 'assets/imgs/card_blue.png',
