@@ -1,6 +1,6 @@
 part of flutter_ds_bfi;
 
-class DSFilledGeneralButton extends StatelessWidget {
+class DSGhostGeneralButton extends StatelessWidget {
   final String keyValue;
   final GestureTapCallback onTap;
   final String text;
@@ -12,7 +12,7 @@ class DSFilledGeneralButton extends StatelessWidget {
   final Color fontColor;
   final Color buttonColor;
 
-  DSFilledGeneralButton(
+  DSGhostGeneralButton(
       {this.keyValue,
       this.onTap,
       @required this.text,
@@ -31,19 +31,17 @@ class DSFilledGeneralButton extends StatelessWidget {
         borderRadius: borderRadiusDefault,
         child: Ink(
           decoration: BoxDecoration(
-            color: buttonState == DSButtonState.Active
-                ? buttonColor
-                : buttonState == DSButtonState.Tapable
-                    ? color
-                    : DSColor.disableColor,
+            color: Colors.transparent,
             borderRadius: borderRadiusDefault,
+            border: Border.all(
+                color: buttonState == DSButtonState.Ghost
+                    ? buttonColor
+                    : DSColor.disableColor,
+                width: 1.0),
             shape: BoxShape.rectangle,
           ),
           child: InkWell(
-            onTap: buttonState == DSButtonState.Active ||
-                    buttonState == DSButtonState.Tapable
-                ? onTap
-                : null,
+            onTap: buttonState == DSButtonState.Ghost ? onTap : null,
             borderRadius: borderRadiusDefault,
             child: Container(
               alignment: Alignment.center,
@@ -58,7 +56,9 @@ class DSFilledGeneralButton extends StatelessWidget {
                       text,
                       style: TextStyle(
                           fontFamily: DSFont.Poppins,
-                          color: fontColor,
+                          color: buttonState == DSButtonState.Ghost
+                              ? fontColor
+                              : DSColor.disableColor,
                           fontSize: fontSize,
                           fontWeight: fontWeight),
                       overflow: TextOverflow.ellipsis,

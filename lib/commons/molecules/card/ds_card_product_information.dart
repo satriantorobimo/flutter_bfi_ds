@@ -33,7 +33,7 @@ class DSCardProductInformation extends StatelessWidget {
           leading: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset(
+              Image.network(
                 image,
                 width: 32,
               )
