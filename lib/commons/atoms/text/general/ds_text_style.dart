@@ -1,6 +1,12 @@
 part of flutter_ds_bfi;
 
 class DSTextStyle {
+  static const TextStyle mediumStyle = TextStyle(
+      fontSize: 16.0,
+      fontFamily: DSFont.Poppins,
+      color: Colors.black,
+      fontWeight: FontWeight.normal);
+
   static const TextStyle defaultStyle = TextStyle(
       fontSize: 14.0,
       fontFamily: DSFont.Poppins,
