@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of flutter_ds_bfi;
 
 class DSCustomTextField extends StatelessWidget {
   final TextEditingController controller;
@@ -47,9 +47,17 @@ class DSCustomTextField extends StatelessWidget {
           autofocus: autofocus,
           keyboardType: keyboardType,
           controller: controller,
+          obscureText: obsecure,
           readOnly: readOnly,
+          onChanged: onChanged,
           maxLength: maxLength ?? 100,
+          onEditingComplete: onEditingCompleted,
+          onTap: onTap,
           decoration: InputDecoration(
+              errorText: errorText,
+              enabled: enabled,
+              suffix: suffix,
+              prefix: prefix,
               hintText: hintText,
               counterText: '',
               isDense: true,
