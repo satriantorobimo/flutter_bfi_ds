@@ -1,4 +1,5 @@
 import 'package:example/component_list/list_textfield.dart';
+import 'package:example/component_list/text_field_custom.dart';
 import 'package:flutter/material.dart';
 import 'component_list/button_screen.dart';
 import 'component_list/color_screen.dart';
@@ -25,7 +26,8 @@ class MyApp extends StatelessWidget {
         '/card': (context) => CardScreen(),
         '/text': (context) => TextScreen(),
         '/font': (context) => FontScreen(),
-        '/listfield': (context) => ListTextField()
+        '/listfield': (context) => ListTextField(),
+        '/customtextfield': (context) => CustomTextField()
       },
       theme: ThemeData(
         appBarTheme: AppBarTheme(
@@ -92,6 +94,13 @@ class _HomeScreenState extends State<HomeScreen> {
                       title: Text("List Text Field"),
                       onTap: () {
                         Navigator.pushNamed(context, '/listfield');
+                      },
+                    ),
+                    ListTile(
+                      trailing: Icon(Icons.arrow_forward_ios),
+                      title: Text("Custom Text Field"),
+                      onTap: () {
+                        Navigator.pushNamed(context, '/customtextfield');
                       },
                     )
                   ],

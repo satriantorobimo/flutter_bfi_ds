@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ds_bfi/commons/molecules/textfield/ds_textfield.dart';
+import 'package:flutter_ds_bfi/flutter_ds_bfi.dart';
 
 class CustomTextField extends StatefulWidget {
   @override
@@ -22,6 +22,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
         keyboardType: TextInputType.text,
         validator: validateEmpty,
         readOnly: readOnlyNamePelapor,
+        obsecure: true,
       ),
     );
   }

@@ -86,3 +86,7 @@ Fixing DS List Text Field
 
 Fixing DS Custom Text Field
 
+## [0.0.1+23] - 03 January 2022.
+
+Fixing DS Custom Text Field Parameter
+
