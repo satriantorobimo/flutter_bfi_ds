@@ -90,3 +90,7 @@ Fixing DS Custom Text Field
 
 Fixing DS Custom Text Field Parameter
 
+## [0.0.1+24] - 11 January 2022.
+
+Add DS Card Label
+
