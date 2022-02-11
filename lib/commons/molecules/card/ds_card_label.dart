@@ -57,7 +57,13 @@ class DSCardLabel extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: label == 'Pending'
                         ? DSColor.secondaryOrange
-                        : DSColor.successGreen,
+                        : label == 'Di review'
+                            ? Color(0xff0567BF)
+                            : label == 'Di tolak'
+                                ? Color(0xffEC0000)
+                                : label == 'Respons TL'
+                                    ? Colors.black
+                                    : DSColor.successGreen,
                     borderRadius: const BorderRadius.only(
                         bottomLeft: Radius.circular(8.0),
                         topRight: Radius.circular(20.0)),

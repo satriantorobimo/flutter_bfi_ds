@@ -94,3 +94,7 @@ Fixing DS Custom Text Field Parameter
 
 Add DS Card Label
 
+## [0.0.1+25] - 11 February 2022.
+
+Add New DS Card Label
+
