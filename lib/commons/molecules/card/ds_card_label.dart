@@ -41,7 +41,7 @@ class DSCardLabel extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
-                  padding: EdgeInsets.only(left: 16.0, top: 20.0),
+                  padding: EdgeInsets.only(left: 16.0, top: 16.0),
                   child: DSText(
                     data: '$title',
                     textStyle: TextStyle(
